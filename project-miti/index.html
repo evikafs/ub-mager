@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UB Mager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="bg-yellow-400 shadow fixed top-0 left-0 w-full z-50 transition-transform duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-black">UB Mager</h1>
+        <div class="space-x-6">
+          <a href="index.html" class="text-black hover:underline">Home</a>
+          <a href="#profil" class="text-black hover:underline">Profil</a>
+          <a href="antarjemput.html" class="text-black hover:underline"
+            >Antar Jemput</a
+          >
+          <a href="joki.html" class="text-black hover:underline">Joki Tugas</a>
+          <a href="jasa-titip.html" class="text-black hover:underline"
+            >Jasa Titip</a
+          >
+          <a href="#kontak" class="text-black hover:underline">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Script untuk hide/show navbar -->
+    <script>
+      let lastScroll = 0;
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+          navbar.style.transform = "translateY(-100%)"; // sembunyi
+        } else {
+          navbar.style.transform = "translateY(0)"; // tampil
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+
+    <!-- Hero -->
+    <section class="relative bg-yellow-400 text-center py-28 mt-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-black">
+        Selamat Datang di UB Mager
+      </h2>
+      <p class="mt-4 text-lg text-black/80">
+        Solusi praktis mahasiswa: antar jemput, joki tugas, dan jasa titip
+        makanan.
+      </p>
+      <div class="mt-6">
+        <a
+          href="#layanan"
+          class="bg-black text-yellow-400 px-8 py-3 rounded-xl font-semibold hover:bg-gray-800 transition"
+        >
+          Jelajahi Layanan
+        </a>
+      </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profil" class="py-16 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Gambar Profil -->
+        <div>
+          <img
+            src="images/ub-mager.png"
+            alt="Profil UB Mager"
+            class="rounded-xl shadow-md"
+          />
+        </div>
+        <!-- Deskripsi Profil -->
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Profil UB Mager</h3>
+          <p class="text-gray-700 leading-relaxed text-justify">
+            <strong>UB Mager</strong> adalah platform yang hadir untuk membantu
+            mahasiswa Universitas Brawijaya menjalani aktivitas sehari-hari
+            dengan lebih mudah. Melalui layanan <em>antar jemput</em>,
+            <em>jasa titip makanan</em>, dan <em>joki tugas</em>, kami
+            berkomitmen memberikan solusi praktis, cepat, dan terpercaya bagi
+            mahasiswa yang sibuk dengan kegiatan akademik maupun organisasi.
+          </p>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Dengan tim yang ramah dan profesional, UB Mager siap menjadi partner
+            andalanmu dalam menghadapi tantangan kehidupan kampus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layanan -->
+    <main class="max-w-6xl mx-auto px-6 py-12" id="layanan">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Layanan Kami</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold">🚗 Antar Jemput</h4>
+          <p class="mt-2 text-gray-600">
+            Transportasi cepat & nyaman di sekitar kampus.
+          </p>
+          <a
+            href="antarjemput.html"
+            class="mt-4 inline-block bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+        <div class="bg-white shadow rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold">📚 Joki Tugas</h4>
+          <p class="mt-2 text-gray-600">
+            Bantu menyelesaikan tugas tepat waktu dengan profesional.
+          </p>
+          <a
+            href="jokitugas.html"
+            class="mt-4 inline-block bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+        <div class="bg-white shadow rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold">🍔 Jasa Titip</h4>
+          <p class="mt-2 text-gray-600">
+            Pesan makanan favoritmu di Malang tanpa repot keluar.
+          </p>
+          <a
+            href="jasatitip.html"
+            class="mt-4 inline-block bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Kontak -->
+    <section id="kontak" class="bg-yellow-100 py-12">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-4">Hubungi Kami</h3>
+        <p>
+          Email:
+          <a
+            href="mailto:ubmager@gmail.com"
+            class="text-yellow-600 font-semibold"
+          >
+            ubmager@gmail.com
+          </a>
+        </p>
+        <p>
+          WhatsApp:
+          <a
+            href="https://wa.me/6281234567890"
+            class="text-yellow-600 font-semibold"
+          >
+            +62 812-3456-7890
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-200 py-6 text-center">
+      <p>© 2025 UB Mager. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
